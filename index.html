@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Additional CSS for Canvas -->
+  <style>
+    /* Ensure the hero section canvas is properly styled */
+    #hero {
+      position: relative;
+      overflow: hidden; /* Prevent canvas overflow */
+    }
+
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Behind the hero content */
+      display: block;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 2; /* Hero content above canvas */
+      color: white; /* Ensure text is visible */
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Improve readability */
+    }
+
+    #hero .social-links a {
+      color: white; /* Ensure social icons are visible */
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename"></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">Über Mich</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <canvas id="hero-canvas" data-aos="fade-in"></canvas>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Dmytro Postoiev<br></h2>
+        <p>Ich bin <span class="typed" data-typed-items="Designer, Elektroniker, Servicetechniker, Developer, Elektromechaniker, Fachinformatiker">Entwickler</span></p>
+        <div class="social-links">
+          <a href="https://de.linkedin.com/in/dmytro-postoiev-4106a9325"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Über Mich</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-4 profile-img align-self-start">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-7 content">
+            <h3>Ich bin Fachinformatiker für Anwendungsentwicklung mit Expertise in Java, PHP, CSS, JavaScript, HTML und Python.</h3>
+            <p>
+              Ich liebe saubere, einfache und einzigartige Lösungen für komplexe Probleme. Mit Leidenschaft entwickle ich Anwendungen,
+              die Benutzerfreundlichkeit und Funktionalität in Einklang bringen.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Erfahrung in der Entwicklung von Webanwendungen mit Java und PHP.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Gestaltung responsiver Benutzeroberflächen mit HTML, CSS und JavaScript.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Implementierung von Datenanalysen und -visualisierungen mit Python.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Ich biete umfassende Dienstleistungen in der Anwendungsentwicklung mit Fokus auf moderne Technologien.</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
+            <div>
+              <h4 class="title">Webentwicklung</h4>
+              <p class="description">Entwicklung von responsiven Webanwendungen mit HTML, CSS und JavaScript für eine optimale Benutzererfahrung.</p>
+              <a href="#" class="readmore stretched-link"><span></span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-braces"></i></div>
+            <div>
+              <h4 class="title">Backend-Entwicklung</h4>
+              <p class="description">Sichere und effiziente Backend-Lösungen mit Java und PHP zur Verwaltung von Daten und Benutzeranfragen.</p>
+              <a href="#" class="readmore stretched-link"><span></span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-graph-up"></i></div>
+            <div>
+              <h4 class="title">Datenanalyse</h4>
+              <p class="description">Datenanalysen und Visualisierungen mit Python zur Unterstützung von Entscheidungen und Strategien.</p>
+              <a href="#" class="readmore stretched-link"><span></span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="bi bi-palette"></i></div>
+            <div>
+              <h4 class="title">UI/UX Design</h4>
+              <p class="description">Gestaltung benutzerfreundlicher Oberflächen mit Fokus auf einfache Navigation und ansprechendes Design.</p>
+              <a href="#" class="readmore stretched-link"><span></span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon flex-shrink-0"><i class="bi bi-shield-lock"></i></div>
+            <div>
+              <h4 class="title">Sicherheit</h4>
+              <p class="description">Implementierung von Sicherheitsmaßnahmen zum Schutz von Daten und Benutzerdaten in Webanwendungen.</p>
+              <a href="#" class="readmore stretched-link"><span></span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="bi bi-gear-fill"></i></div>
+            <div>
+              <h4 class="title">Wartung & Support</h4>
+              <p class="description">Kontinuierliche Wartung und Support von Anwendungen, um eine reibungslose Funktionalität sicherzustellen.</p>
+              <a href="#" class="readmore stretched-link"><span></span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Ein Paar Projekten</p>
+      </div>
+
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter=".filter-app"></li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Java</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>JavaScript</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Java1</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>JavaScript1</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>HTML</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>HTML1</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Python</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Python1</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p></p>
+                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/DmytroPostoiev" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Kontakt</h2>
+        <p></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Adresse</h3>
+                  <p>79418, Schliengen Hans-Thoma-Strasse 16</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Tel<br></h3>
+                  <p>+49-176-71-21-3663</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>E-Mail</h3>
+                  <p>postoievdmitriy@web.de</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="E Mail" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Betreff" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Nachricht" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Danke für Ihre Nachricht!</div>
+              <button type="submit">Senden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section><!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://de.linkedin.com/in/dmytro-postoiev-4106a9325"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        <span></span> <strong class="px-1 sitename"></strong> <span>All Rechte vorbehalten</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Canvas Animation Script -->
+  <script>
+    // Grab the canvas element from the DOM
+    const canvas = document.getElementById("hero-canvas");
+    const ctx = canvas.getContext("2d");
+
+    // Arrays to hold various particle types
+    const particles = [];
+    const fireworkParticles = [];
+    const dustParticles = [];
+    const ripples = [];
+
+    // Some global state variables for frame counting
+    let frameCount = 0;
+    let autoDrift = true;
+
+    // Dynamically adjust the number of particles based on canvas size
+    function adjustParticleCount() {
+      const particleConfig = {
+        heightConditions: [200, 300, 400, 500, 600],
+        widthConditions: [450, 600, 900, 1200, 1600],
+        particlesForHeight: [40, 60, 70, 90, 110],
+        particlesForWidth: [40, 50, 70, 90, 110]
+      };
+
+      let numParticles = 130;
+
+      for (let i = 0; i < particleConfig.heightConditions.length; i++) {
+        if (canvas.height < particleConfig.heightConditions[i]) {
+          numParticles = particleConfig.particlesForHeight[i];
+          break;
+        }
+      }
+
+      for (let i = 0; i < particleConfig.widthConditions.length; i++) {
+        if (canvas.width < particleConfig.widthConditions[i]) {
+          numParticles = Math.min(numParticles, particleConfig.particlesForWidth[i]);
+          break;
+        }
+      }
+
+      return numParticles;
+    }
+
+    // Particle class for normal and firework particles
+    class Particle {
+      constructor(x, y, isFirework = false) {
+        const baseSpeed = isFirework ? Math.random() * 2 + 1 : Math.random() * 0.5 + 0.3;
+        Object.assign(this, {
+          isFirework,
+          x,
+          y,
+          vx: Math.cos(Math.random() * Math.PI * 2) * baseSpeed,
+          vy: Math.sin(Math.random() * Math.PI * 2) * baseSpeed,
+          size: isFirework ? Math.random() * 2 + 2 : Math.random() * 3 + 1,
+          alpha: 1,
+          sizeDirection: Math.random() < 0.5 ? -1 : 1,
+          trail: []
+        });
+      }
+
+      update() {
+        if (!this.isFirework && autoDrift) {
+          this.vx += (Math.random() - 0.5) * 0.03;
+          this.vy += (Math.random() - 0.5) * 0.03;
+        } else if (this.isFirework) {
+          this.alpha -= 0.02;
+        }
+
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x <= 0 || this.x >= canvas.width - 1) this.vx *= -0.9;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -0.9;
+
+        this.size += this.sizeDirection * 0.1;
+        if (this.size > 4 || this.size < 1) this.sizeDirection *= -1;
+
+        if (frameCount % 2 === 0 && (Math.abs(this.vx) > 0.1 || Math.abs(this.vy) > 0.1)) {
+          this.trail.push({ x: this.x, y: this.y, alpha: this.alpha });
+          if (this.trail.length > 15) this.trail.shift();
+        }
+      }
+
+      draw(ctx) {
+        ctx.fillStyle = `rgba(0, 255, 0, ${Math.max(this.alpha, 0)})`;
+        ctx.beginPath();
+        this.drawStar(this.x, this.y, 5, this.size, this.size / 2);
+        ctx.fill();
+
+        if (this.trail.length > 1) {
+          ctx.beginPath();
+          ctx.lineWidth = 1.5;
+          for (let i = 0; i < this.trail.length - 1; i++) {
+            const { x: x1, y: y1, alpha: a1 } = this.trail[i];
+            const { x: x2, y: y2 } = this.trail[i + 1];
+            ctx.strokeStyle = `rgba(0, 255, 0, ${Math.max(a1, 0)})`;
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+          }
+          ctx.stroke();
+        }
+      }
+
+      drawStar(cx, cy, spikes, outerRadius, innerRadius) {
+        let rot = Math.PI / 2 * 3;
+        let x = cx;
+        let y = cy;
+        const step = Math.PI / spikes;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - outerRadius);
+        for (let i = 0; i < spikes; i++) {
+          x = cx + Math.cos(rot) * outerRadius;
+          y = cy + Math.sin(rot) * outerRadius;
+          ctx.lineTo(x, y);
+          rot += step;
+
+          x = cx + Math.cos(rot) * innerRadius;
+          y = cy + Math.sin(rot) * innerRadius;
+          ctx.lineTo(x, y);
+          rot += step;
+        }
+        ctx.lineTo(cx, cy - outerRadius);
+        ctx.closePath();
+      }
+
+      isDead() {
+        return this.isFirework && this.alpha <= 0;
+      }
+    }
+
+    // Dust particles for background texture
+    class DustParticle {
+      constructor() {
+        Object.assign(this, {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 1.5 + 0.5,
+          vx: (Math.random() - 0.5) * 0.05,
+          vy: (Math.random() - 0.5) * 0.05
+        });
+      }
+
+      update() {
+        this.x = (this.x + this.vx + canvas.width) % canvas.width;
+        this.y = (this.y + this.vy + canvas.height) % canvas.height;
+      }
+
+      draw(ctx) {
+        ctx.fillStyle = `rgba(0, 255, 0, 0.3)`;
+        ctx.beginPath();
+        this.drawStar(this.x, this.y, 5, this.size, this.size / 2);
+        ctx.fill();
+      }
+
+      drawStar(cx, cy, spikes, outerRadius, innerRadius) {
+        let rot = Math.PI / 2 * 3;
+        let x = cx;
+        let y = cy;
+        const step = Math.PI / spikes;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - outerRadius);
+        for (let i = 0; i < spikes; i++) {
+          x = cx + Math.cos(rot) * outerRadius;
+          y = cy + Math.sin(rot) * outerRadius;
+          ctx.lineTo(x, y);
+          rot += step;
+
+          x = cx + Math.cos(rot) * innerRadius;
+          y = cy + Math.sin(rot) * innerRadius;
+          ctx.lineTo(x, y);
+          rot += step;
+        }
+        ctx.lineTo(cx, cy - outerRadius);
+        ctx.closePath();
+      }
+    }
+
+    // Ripples for click effects
+    class Ripple {
+      constructor(x, y, maxRadius = 30) {
+        Object.assign(this, { x, y, radius: 0, maxRadius, alpha: 0.5 });
+      }
+
+      update() {
+        this.radius += 1.5;
+        this.alpha -= 0.01;
+      }
+
+      draw(ctx) {
+        ctx.strokeStyle = `rgba(0, 255, 0, ${this.alpha})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      isDone() {
+        return this.alpha <= 0;
+      }
+    }
+
+    // Create initial particles
+    function createParticles() {
+      particles.length = 0;
+      dustParticles.length = 0;
+
+      const numParticles = adjustParticleCount();
+      for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
+      }
+      for (let i = 0; i < 200; i++) {
+        dustParticles.push(new DustParticle());
+      }
+    }
+
+    // Resize canvas to match hero section
+    function resizeCanvas() {
+      const heroSection = document.getElementById("hero");
+      canvas.width = heroSection.offsetWidth;
+      canvas.height = heroSection.offsetHeight;
+      createParticles();
+    }
+
+    // Draw black background
+    function drawBackground() {
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Connect nearby particles with green lines
+    function connectParticles() {
+      const gridSize = 120;
+      const grid = new Map();
+
+      particles.forEach((p) => {
+        const key = `${Math.floor(p.x / gridSize)},${Math.floor(p.y / gridSize)}`;
+        if (!grid.has(key)) grid.set(key, []);
+        grid.get(key).push(p);
+      });
+
+      ctx.lineWidth = 1.5;
+      particles.forEach((p) => {
+        const gridX = Math.floor(p.x / gridSize);
+        const gridY = Math.floor(p.y / gridSize);
+
+        for (let dx = -1; dx <= 1; dx++) {
+          for (let dy = -1; dy <= 1; dy++) {
+            const key = `${gridX + dx},${gridY + dy}`;
+            if (grid.has(key)) {
+              grid.get(key).forEach((neighbor) => {
+                if (neighbor !== p) {
+                  const diffX = neighbor.x - p.x;
+                  const diffY = neighbor.y - p.y;
+                  const dist = diffX * diffX + diffY * diffY;
+                  if (dist < 10000) {
+                    ctx.strokeStyle = `rgba(0, 255, 0, ${1 - Math.sqrt(dist) / 100})`;
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(neighbor.x, neighbor.y);
+                    ctx.stroke();
+                  }
+                }
+              });
+            }
+          }
+        }
+      });
+    }
+
+    // Main animation loop
+    function animate() {
+      drawBackground();
+
+      [dustParticles, particles, ripples, fireworkParticles].forEach((arr) => {
+        for (let i = arr.length - 1; i >= 0; i--) {
+          const obj = arr[i];
+          obj.update();
+          obj.draw(ctx);
+          if (obj.isDone?.() || obj.isDead?.()) arr.splice(i, 1);
+        }
+      });
+
+      connectParticles();
+      frameCount++;
+      requestAnimationFrame(animate);
+    }
+
+    // Click to create ripple and firework effect
+    canvas.addEventListener("click", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+
+      ripples.push(new Ripple(clickX, clickY, 60));
+
+      for (let i = 0; i < 15; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 2 + 1;
+        const particle = new Particle(clickX, clickY, true);
+        particle.vx = Math.cos(angle) * speed;
+        particle.vy = Math.sin(angle) * speed;
+        fireworkParticles.push(particle);
+      }
+    });
+
+    // Resize event
+    window.addEventListener("resize", resizeCanvas);
+
+    // Initialize
+    resizeCanvas();
+    animate();
+  </script>
+</body>
+</html>
